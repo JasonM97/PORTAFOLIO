@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        <title>Portafolio Jason</title>
+        <link rel="stylesheet" href="estilo.css">
+        <link rel="stylesheet" href="carrucel.css">
+
+        <link rel="icon" href="img/avatar.png" type="image/png">
+
+    </head>
+
+
+
+    <body>
+       <!-- MENU DE ECABEZADO -->
+        <div class="contenedor-header">
+ 
+            <!-- ENCABEZADO-->
+            <header >
+
+                <!-- PARA EL LOGO DE MI PAGINA-->
+                <div class="logo"> 
+                    <a href="#"> JM</a>
+
+                </div>
+
+               <!-- PARA NAVEGAR LAS PAGINA-->
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#sobremi">Sobre mi</a></li>
+                        <li>
+                         <a href="#skills" onclick="window.location.href = '#skills'; location.reload(); return false;">
+                                    Skills
+                            </a>
+                        </li>
+
+                        <li><a href="#cv">Curriculum</a></li>
+                        <li><a href="#portafolio">Portafolio</a></li>
+                        <li><a href="#contactos">Contacto</a></li>
+
+                    </ul>
+                </nav>
+
+                <!-- PARA EL MENU DESPLEGABLE-->
+                <div class="nav-responsive">
+                    <i class="fa-solid fa-bars"></i>
+    
+                </div>
+
+            </header>
+
+        </div>
+
+       <!-- SECCION DE INICIO-->
+        <section id="inicio" class="inicio">
+            <div class="contenedor-banner"> 
+                <!-- Para contener la foto principal-->
+                <div class="contenedor-img">
+                    <img src="img/FOTO.jpeg" alt="yo" height="280" >
+                </div>
+                <h1>JASON MARCATOMA</h1>
+                <h2>Ing. Estadistico / Data Analitycs</h2>
+                <h2>Desarrollador Jr</h2>
+                <!-- Para contener las redes sociales-->
+                <div class="redes">
+                    <a href="https://www.facebook.com/share/1GJ3pryJMz/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/jjason_m7?igsh=MXFuYnA2cHJhdmV5bw=="><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/jason-javier-marcatoma-5251b515a/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/JasonM97"><i class="fa-brands fa-github"></i></a>
+                </div>  
+
+            </div>
+
+        </section>
+
+
+        <!-- SECCION SOBRE MI-->
+        <section id="sobremi" class="sobremi">
+
+            <!-- Contenido de Quien soy  -->
+            <div class="contenido-seccion">
+
+                <!-- Describe sobre mi profesion -->
+                <h2>Sobre mi</h2>
+                <p>Hola <i class="fa-solid fa-hand-peace"></i>, soy
+                    <span>Jason Marcatoma </span>  ingeniero estadístico apasionado por el análisis de datos y la programación. Me encanta resolver problemas complejos y encontrar patrones en los datos. Siempre estoy buscando aprender nuevas habilidades y mejorar mis conocimientos
+                </p>
+            
+
+                <!-- Contenido de Datos personales e Interes sobre mi  -->
+                <div class="fila">
+                    <!-- Datos personales -->
+                    <div  class="col">
+                        <h3>Datos Personales</h3>
+                        <ul>
+                            <li><strong>Nacimiento:</strong> 01-01-1997</li>
+                            <li><strong>Teléfono:</strong> 0987724651</li>
+                            <li><strong>Correo:</strong> jason97gts@gmail.com</li>
+                            <li><strong>Dirección:</strong> Ecuador, Quito</li>
+                            <li><strong>Cargo:</strong> Data Analitycs Jr (REDMEDIA) </li>
+                        </ul>
+                    </div>
+                    <!-- Intereses -->
+                    <div  class="col">
+                        <h3> Intereses </h3>
+                        <!-- Contenedor de intereses: visualizaxion de manera dinamica -->
+                        <div class="contenedor-intereses">
+                            <!-- Para icono de juego extraido de la web-->
+                            <div class="interes">
+                                <i class="fa-solid fa-gamepad"></i>
+                                <span>JUEGOS</span>
+                            </div>
+                            <!-- Para icono de musica extraido de la web-->
+                            <div class="interes">
+                                <i class="fa-solid fa-headphones"></i>
+                                <span>MUSICA</span>
+                            </div>
+                            <!-- Para icono de gimnasio extraido de la web-->
+                            <div class="interes">
+                                <i class="fa-solid fa-dumbbell"></i>
+                                <span>GYM</span>
+                            </div>
+                            <!-- Para icono de futbol extraido de la web-->
+                            <div class="interes">
+                                <i class="fa-regular fa-futbol"></i>
+                                <span>FÚTBOL</span>
+                            </div>                          
+                            <!-- Para icono de pelciulas extraido de la web-->
+                            <div class="interes">
+                                <i class="fa-solid fa-film"></i>
+                                <span>PELÍCULAS</span>
+                            </div> 
+                                                       
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Boton para decasragr mi Cv  -->
+                <button>
+                    Descargar CV <i class="fa-solid fa-download"></i>
+                     <span class="overlay"></span>
+                </button>
+
+            </div>
+
+
+        </section>
+        <br\>
+
+        <!-- SECCION SKILSS-->
+        <section id="skills" class="skills">
+            <div class="contenido-seccion">
+                <h2>Skills</h2>
+
+                <div class="fila"> 
+                    <!-- Skils Tecnicas-->
+                    <div class="col">
+                        <h3>Skills Técnicos</h3>
+                        <!-- JAVA-->
+                        <div class="skill">
+                            <span>JAVA</span>
+                            <div class="barra-skill">
+                                <div class="progeso javascript">
+                                    <span>50%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- HTML-->
+                        <div class="skill">
+                            <span>HTML&CSS</span>
+                            <div class="barra-skill">
+                                <div class="progeso htmlcss">
+                                    <span>50%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                       <!-- PYTHON-->
+                        <div class="skill">
+                            <span>PYTHON</span>
+                            <div class="barra-skill">
+                                <div class="progeso pythonn">
+                                    <span>40%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                       <!-- SQL-->
+                        <div class="skill">
+                            <span>SQL</span>
+                            <div class="barra-skill">
+                                <div class="progeso sqll">
+                                    <span>60%</span>
+                                </div>
+                            </div>
+                        </div>
+                     
+                       <!-- POWER BI & LOOKER STUDIO-->
+                        <div class="skill">
+                            <span>POWER BI & LOOKER STUDIO</span>
+                            <div class="barra-skill">
+                                <div class="progeso polook">
+                                    <span>70%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                       <!-- EXCEL-->
+                        <div class="skill">
+                            <span>EXCEL</span>
+                            <div class="barra-skill">
+                                <div class="progeso excel">
+                                    <span>70%</span>
+                                </div>
+                            </div>
+                        </div>                        
+  
+                    </div>
+
+                    <!-- Skils Porfesionales-->
+                    <div class="col">
+                        <h3>Skills Profesionales</h3>
+
+                        <!-- Analisis de Datos-->
+                        <div class="skill">
+                            <span>Análisis de Datos</span>
+                            <div class="barra-skill">
+                                <div class="progeso estadistico ">
+                                    <span>80%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Visualizacion de Datos-->
+                        <div class="skill">
+                            <span>Visualización de Datos</span>
+                            <div class="barra-skill">
+                                <div class="progeso graficos ">
+                                    <span>80%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                       <!-- Ciencia de Datos Jr-->
+                        <div class="skill">
+                            <span>Ciencia de Datos Jr</span>
+                            <div class="barra-skill">
+                                <div class="progeso datos">
+                                    <span>60%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                       <!-- Resolución de Probelmas-->
+                        <div class="skill">
+                            <span>Resolución de Problemas</span>
+                            <div class="barra-skill">
+                                <div class="progeso problema">
+                                    <span>90%</span>
+                                </div>
+                            </div>
+                        </div>  
+
+                       <!-- Trabajo en equipo-->
+                        <div class="skill">
+                            <span>Trabajo en equipo</span>
+                            <div class="barra-skill">
+                                <div class="progeso trabajo">
+                                    <span>100%</span>
+                                </div>
+                            </div>
+                        </div>  
+
+                       <!--  Adaptabilidad y aprendizaje-->
+                        <div class="skill">
+                            <span> Adaptabilidad y aprendizaje</span>
+                            <div class="barra-skill">
+                                <div class="progeso adaptabilidad">
+                                    <span>100%</span>
+                                </div>
+                            </div>
+                        </div>                 
+
+                    </div>  <!-- SKP-->                  
+                </div>
+                
+
+            </div>
+        </section>
+
+        <!-- SECCION CURRICULUM-->
+        <section id="cv" class="cv"> 
+            <div class="contenido-seccion">
+
+                <!-- Seccion de titulos-->
+                <h2>CURRICULUM</h2>
+                <div class="fila">
+
+                    <!-- Experiencia Academcia -->
+                    <div class="col izquierda">
+                        <h3>Educación</h3>
+                        <br>
+
+                        <!-- Cuadro para cada titulo-->
+                        <div class="item izq">
+                            <h4>Ingeniería Estadística</h4>
+                            <span class="casa">Universidad Central del Ecuador</span>
+                            <br>
+                            <span class="fecha">2016 - 2022</span>
+                            <div class="conectori">
+                                <div class="circuloi"></div>    
+                            </div>
+
+                        </div>
+
+                        <!-- DESARROLLO DE SOFTWARE-->
+                        <div class="item izq">
+                            <h4>Tecnologia Desarrollo de Software</h4>
+                            <span class="casa">Instituto Tecnoecuatoriano</span>
+                            <br>
+                            <span class="fecha">2023 - Actualmente</span>
+                            <br>
+                            <span class="fecha">Semestre: 4/4</span>
+                            <div class="conectori">
+                                <div class="circuloi"></div>    
+                            </div>
+
+                        </div>
+
+                        <!-- DIPLOMADO CIENCIA DE DATOS-->
+                        <div class="item izq">
+                            <h4>Diplomado Ciencia de Datos</h4>
+                            <span class="casa">Escuela Politécnica Nacional </span><br>
+                            <span class="fecha">2023 -2023</span>
+                            <br>
+                            <span class="fecha">Horas: 160</span>
+                            <div class="conectori">
+                                <div class="circuloi"></div>    
+                            </div>
+                        </div>
+
+                        <!-- DIPLOMADO CIENCIA DE DATOS-->
+                        <div class="item izq">
+                            <h4>Diplomado Business Intelligence</h4>
+                            <span class="casa">Colegio De Economistas Del Perú – GEM</span><br>
+                            <span class="fecha">2022 -2023</span>
+                            <br>
+                            <span class="fecha">Horas: 200</span>
+                            <div class="conectori">
+                                <div class="circuloi"></div>    
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Experiencia Laboral -->
+                    <div class="col derecha">
+                        <h3>Experiencia Laboral</h3>
+                        <br>
+
+                        <!-- Cuadro para cada titulo-->
+                        <div class="item der">
+                            <h4>Data Reporting</h4>
+                            <span class="casa">HAVAS-EC</span>
+                            <span class="fecha">2023 - 2024</span>
+                            <p>Desarrollé informes de datos de marketing para MOVISTAR utilizando herramientas como Power BI y Looker Studio, mejorando la visualización de datos y la toma de decisiones.</p>
+                            <div class="conectord">
+                                <div class="circulod"></div>    
+                            </div>
+                        </div>
+
+                        <!-- Cuadro para cada titulo-->
+                        <div class="item der">
+                            <h4>Investigacion de Mercado & Data</h4>
+                            <span class="casa">GRUPO HERRERA</span>
+                            <span class="fecha">2024 - 2024</span>
+                            <p>Desarrollar de informes de los rendimientos de estrategias de marketing en Telefónica, para obtener insights clave en la toma de decisiones, actualización de tableros para monitoreo en tiempo real de las campañas publicitarias.</p>
+                            <div class="conectord">
+                                <div class="circulod"></div>    
+                            </div>
+                        </div>
+
+                        <div class="item der">
+                            <h4>Data Analitycs Jr & Research</h4>
+                            <span class="casa">REDMEDIA</span>
+                            <span class="fecha">2024 - 2024</span>
+                            <p>Elaborar análisis de perfil de consumidores de las categorías de servicios o productos en el mercado.	Crear y actualizar reportes en Power BI, de acuerdo con las categorías del mercado publicitario</p>
+                            <div class="conectord">
+                                <div class="circulod"></div>    
+                            </div>
+                        </div>
+
+
+
+                          
+                    </div>
+
+                
+                </div> 
+
+                <!-- Galeria de fotos de certificados-->
+                <h2>CERTIFICADOS</h2>
+                <!-- Carousel wrapper -->
+                <div class="fila">
+                            <div class="carousel-container">
+                                <div class="carousel-slide">
+                                    <!--imagen 1-->
+                                    <div class="carousel-item">
+                                        <img src="img/c_bussnies.png">
+                                        <div class="carousel-caption">   
+                                            <h2>2022</h2>
+                                        </div>
+                                    </div>
+
+                                    <!--imagen 2-->
+                                    <div class="carousel-item">
+                                        <img src="img/c_power.png">
+                                        <div class="carousel-caption">   
+                                            <h2>2022</h2>
+                                        </div>
+                                    </div>
+
+                                    <!--imagen 3-->
+                                    <div class="carousel-item">
+                                        <img src="img/c_datascience.png"> 
+                                        <div class="carousel-caption">   
+                                            <h2>2023</h2>
+                                        </div>                                        
+                                    </div>
+
+                                    <!--imagen 4-->
+                                    <div class="carousel-item">
+                                        <img src="img/c_sql.png"> 
+                                        <div class="carousel-caption">   
+                                            <h2>2025</h2>
+                                        </div>                                        
+                                    </div>
+
+                                    <!--imagen 5-->
+                                    <div class="carousel-item">
+                                        <img src="img/c_python.png">
+                                        <div class="carousel-caption">   
+                                            <h2>2025</h2>
+                                        </div>                                          
+                                    </div>
+
+                                    <!--imagen 6-->
+                                    <div class="carousel-item">
+                                        <img src="img/c_taller_soft.png">
+                                        <div class="carousel-caption">   
+                                            <h2>2025</h2>
+                                        </div>                                         
+                                    </div>
+
+                                </div>
+
+                                <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
+                                <button class="carousel-control next" onclick="moveSlide(1)">&#10095;</button>
+                            </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCION PORTAFOLIO-->
+
+        <section id="portafolio"class="portafolio">
+
+            <div class="fila">
+                <h2>Portafolio</h2>
+                <p>Proximamente...</p> 
+
+            </div>
+
+        </section>
+
+        <!-- JS : Para el carrusel de certificados-->
+       <script src="carrucel.js"></script>
+       
+
+    </body>
+    
+</html>
+
+
+
