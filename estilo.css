@@ -610,6 +610,285 @@ html{
 
 
 
+/* ---------------------------------- */
+/* ESTILO PARA LA SECCION: PORTAFOLIO */
+/* ---------------------------------- */
+
+/******** ESTILO DE LA SECCION */
+.portafolio{
+    background: #2c3236;
+    padding: 100px 50px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 250px;
+    grid-gap: 20px;
+
+}
+
+/* Estilo del titulo "Postafolio" */
+.portafolio h2{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #49b8a0;
+}
+
+/* Estilo de las cajas donde van las imagenes del portafolio */
+.box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+/* Para que la primera imagen del portafolio sea mas grande que las demas */
+.box:nth-child(1){
+    grid-column: span 2;
+}
+.box:nth-child(4){
+    grid-column: span 2;
+}
+
+/* Al pasar el mouse por encima de las imagenes del portafolio se agrande */
+.box:hover img{
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+/*Para que las imganes se acoplen a la pagina y se pongan ennvertical con el mismo tamaño */
+@media (max-width: 768px){
+    .portafolio{
+        padding: 30px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .box:nth-child(1){
+        grid-column: span 2;
+    }
+    .box:nth-child(4){
+        grid-column: span 2;
+    }
+
+    .box:hover img{
+    transform: scale(1.1);
+    transition: .5s;
+    }
+}
+
+/*********** para el POPUP: ventan pequeña de cada proyecto*/
+
+/* Estilo del fondo del modal */
+.modal {
+  display: none;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Scroll si contenido es grande */
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* Estilo del contenido del modal */
+.modal-content {
+  background-color: #dddbdb;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px; /* ancho máximo */
+  width: 50%;
+  height: 80%; /* Altura máxima del modal */
+  position: relative;
+  overflow-x: auto; /* Scroll vertical */
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Estilo del titulo del modal */
+.modal-content h2 {
+  margin-top: 10px;
+  color: #141414;
+  text-align: center;
+}
+.modal-content h3 {
+  margin-top: 10px;
+  color: #141414;
+  
+}
+
+/* Estilo del parrafo del modal */
+.modal-content p {
+  margin-top: 10px;
+  color: #141414;
+  text-align: center;
+}
+
+
+
+/* Carrusel */
+.carousel-modal {
+  position: relative;
+  width: 80%;
+  max-width: 500px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  height: 300px;
+  object-fit: cover;
+  display: none; /* Oculta todas las imágenes al inicio */
+}
+
+.carousel-image.active {
+  display: flex;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10; /* Para que quede sobre las imágenes */
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+
+/* Modal responsive: PARA AJUSTAR A PANTALLAS DIFERNETES */
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 90%;          /* Ocupa casi toda la pantalla */
+    height: auto;        /* Ajusta altura según contenido */
+    margin: 5% auto;     /* Menos margen arriba/abajo */
+    padding: 15px;
+  }
+
+  .carousel-modal {
+    width: 100%;         /* Carrusel ocupa todo el ancho del modal */
+    max-width: 100%;
+  }
+
+  .carousel-image {
+    height: 300px;       /* Menor altura para móviles */
+    padding: 5px;
+    margin-top: 10px;
+  }
+
+  .prev, .next {
+    padding: 6px 10px;   /* Botones más pequeños */
+    top: 50%;
+  }
+}
+
+/* Para pantallas muy pequeñas (celulares) */
+@media screen and (max-width: 480px) {
+  .modal-content {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .carousel-image {
+    height: 150px;
+  }
+
+  .prev, .next {
+    padding: 5px 8px;
+  }
+}
+
+/*** ESTILO DE LOS ICONOS DE LAS TECNOLOGIAS */
+.skills-icons {
+    display: flex;          /* Hace que los iconos estén en fila */
+    gap: 20px;              /* Espacio entre cada icono */
+    align-items: center;    /* Centrar verticalmente */
+    justify-content: flex-start; /* Alineación horizontal */
+    margin-top: 10px;
+}
+
+.skills-icons img {
+    width: 40px;            /* Tamaño de cada icono */
+    height: 40px;
+    object-fit: contain;    /* Ajusta la imagen dentro del recuadro */
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.skills-icons img:hover {
+    transform: scale(1.2);  /* Efecto al pasar el mouse */
+}
+
+/*** ESTILO FUNCIONES EN EL PROYECTO */
+.skills-icons ul {
+    list-style-type: disc;   /* viñetas circulares */
+    padding-left: 20px;      /* separación desde el borde */
+    margin: 0;
+}
+
+.skills-icons li {
+    margin-bottom: 2px;      /* espacio entre cada elemento */
+    font-size: 14px;
+    color: #333;
+}
+
+/*** ESTILO boton ver proyectos */
+.ver-proyecto {
+    display: flex;
+    justify-content: center; /* centra horizontalmente */
+    margin-top: 20px;        /* separa del contenido anterior */
+}
+
+.btn-codigo {
+    background-color: #4c5053;   /* color inicial */
+    color: #fff;                 /* texto blanco */
+    border: none;
+    margin-top: 10px;
+    
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Efecto hover */
+.btn-codigo:hover {
+    background-color: #49b8a0;  /* color al pasar el cursor */
+    transform: scale(1.05);      /* efecto ligero de agrandamiento */
+}
+
+
+
+
+
+
+
+
+
 
 
 

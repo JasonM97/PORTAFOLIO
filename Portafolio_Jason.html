@@ -10,8 +10,11 @@
         <title>Portafolio Jason</title>
         <link rel="stylesheet" href="estilo.css">
         <link rel="stylesheet" href="carrucel.css">
+        <script src="popup.js" defer></script>
+        <script src="popup_carrucel.js" defer></script>
 
         <link rel="icon" href="img/avatar.png" type="image/png">
+
 
     </head>
 
@@ -477,17 +480,124 @@
         <!-- SECCION PORTAFOLIO-->
 
         <section id="portafolio"class="portafolio">
+            <!-- PROYECTO CALACULADORA-->
+             
+            <div class="box">
+                <img src="app/calculadora1.png" alt="" onclick="abrirModal('modal1')">
+            </div>
 
-            <div class="fila">
-                <h2>Portafolio</h2>
-                <p>Proximamente...</p> 
+            <!-- PROYECTO SISTEMAS DE VENTA-->
+            <div class="box">
+                <img src="app/calculadora1.png" alt="" onclick="abrirModal('modal2')">
+            </div>
 
+            <!-- PROYECTO APP MOVIL: TRANSPORTE-->
+            <div class="box">
+                <img src="app/calculadora1.png" alt="">
+            </div>
+
+
+            <!-- PROYECTO PAGINA WEB: JARDIN BOTANICO-->
+            <div class="box">
+                <img src="app/calculadora1.png" alt="">
+            </div>
+
+            <!-- DASHBOAR POWER BI: PARA AUTOS -->
+            <div class="box">
+                <img src="app/calculadora1.png" alt="">
             </div>
 
         </section>
 
+            <!-- Modal Proyecto 1 : CALCULADORA -->
+            <div id="modal1" class="modal">
+
+                <div class="modal-content">
+                   <span class="close" onclick="cerrarModal('modal1')">&times;</span>
+                    <h2>Proyecto Calculadora</h2>
+                    <p>Calculadora para realizar operaciones basicas matemáticas</p>
+
+                    <!-- Carrusel de imágenes -->
+                    <div class="carousel-modal">
+                        <img class="carousel-image" src="app/calculadora1.png" alt="Imagen 1">
+                        <img class="carousel-image" src="img/c_power.png" alt="Imagen 2">
+                        <img class="carousel-image" src="img/c_datascience.png" alt="Imagen 3">
+
+                        <button class="prev" onclick="modalCarousel.prev()">&#10094;</button>
+                        <button class="next" onclick="modalCarousel.next()">&#10095;</button>
+                    </div>
+
+                    <h3>Tecnologías</h3>
+                    <div class="skills-icons">
+                            <img src="iconos/html.png" alt="Java" title="Java">
+                            <img src="iconos/html.png" alt="NetBeans" title="NetBeans">
+                            <img src="iconos/html.png" alt="GitHub" title="GitHub">
+                    </div>
+
+                    <h3>Mi función</h3>
+                    <div class="skills-icons">
+                                <ul>
+                                    <li>Desarrollé la interfaz de usuario</li>
+                                    <li>Diseñé la experiencia visual de la aplicación</li>
+                                    <li>Implementé funcionalidades clave</li>
+                                </ul>
+                    </div>
+                    <!-- Boton ver proyecto -->
+                    <div class="ver-proyectos">
+                        <a href="https://github.com/JasonM97/PORTAFOLIO" target="_blank">
+                            <button class="btn-codigo">Ver Código</button>
+                        </a>
+                    </div>
+                </div>
+
+            </div> 
+
+            <!-- Modal Proyecto 2 -->
+            <div id="modal2" class="modal">
+
+                <div class="modal-content">
+                   <span class="close" onclick="cerrarModal('modal2')">&times;</span>
+                    <h2>Proyecto Calculadora</h2>
+                    <p>Calculadora para realizar operaciones basicas matemáticas</p>
+
+                    <!-- Carrusel de imágenes -->
+                    <div class="carousel-modal">
+                        <img class="carousel-image" src="app/calculadora1.png" alt="Imagen 1">
+                        <img class="carousel-image" src="img/c_power.png" alt="Imagen 2">
+                        <img class="carousel-image" src="img/c_datascience.png" alt="Imagen 3">
+
+                        <button class="prev" onclick="modalCarousel.prev()">&#10094;</button>
+                        <button class="next" onclick="modalCarousel.next()">&#10095;</button>
+                    </div>
+
+                    <h3>Tecnologías</h3>
+                    <div class="skills-icons">
+                            <img src="iconos/html.png" alt="Java" title="Java">
+                            <img src="iconos/html.png" alt="NetBeans" title="NetBeans">
+                            <img src="iconos/html.png" alt="GitHub" title="GitHub">
+                    </div>
+
+                    <h3>Mi función</h3>
+                    <div class="skills-icons">
+                                <ul>
+                                    <li>Desarrollé la interfaz de usuario</li>
+                                    <li>Diseñé la experiencia visual de la aplicación</li>
+                                    <li>Implementé funcionalidades clave</li>
+                                </ul>
+                    </div>
+                    <!-- Boton ver proyecto -->
+                    <div class="ver-proyectos">
+                        <a href="https://github.com/JasonM97/PORTAFOLIO" target="_blank">
+                            <button class="btn-codigo">Ver Código</button>
+                        </a>
+                    </div>
+                </div>
+
+            </div> 
+
         <!-- JS : Para el carrusel de certificados-->
        <script src="carrucel.js"></script>
+
        
 
     </body>
