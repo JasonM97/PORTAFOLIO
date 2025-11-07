@@ -1,19 +1,18 @@
-// Función para abrir modal
+// Abrir modal
 function abrirModal(id) {
   const modal = document.getElementById(id);
   modal.style.display = "flex";
-
-  // Cerrar al hacer click en la X
-  const closeBtn = modal.querySelector('.close');
-  closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
-
-  // Cerrar al hacer click fuera del contenido
-  window.addEventListener('click', function handler(event) {
-    if (event.target === modal) {
-      modal.style.display = 'none';
-      window.removeEventListener('click', handler); // eliminar el listener
-    }
-  });
 }
+
+//Cerrar modal
+function cerrarModal(id) {
+  const modal = document.getElementById(id);
+  modal.style.display = "none";
+}
+
+// Cerrar si se hace clic fuera del contenido
+window.addEventListener("click", (event) => {
+  if (event.target.classList.contains("modal")) {
+    event.target.style.display = "none";
+  }
+});

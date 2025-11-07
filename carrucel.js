@@ -24,4 +24,4 @@ function moveSlide(direction) {
 // Opcional: Auto deslizar
 setInterval(() => {
     moveSlide(1);
-}, 5000); // Cambia cada 5 segundos
+}, 2000); // Cambia cada 5 segundos

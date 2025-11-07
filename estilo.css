@@ -20,6 +20,9 @@ html{
     /* Permite el desplazamiento suave al hacer clic en los enlaces del menú */
     scroll-behavior: smooth;
 }
+section {
+    scroll-margin-top: 90px; /* Ajusta  según la altura de tu header */
+}
 
 
 /* ---------------------------------- */
@@ -47,6 +50,7 @@ html{
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
+    box-sizing: border-box;
 }
 
 /* Estilo para el logo */
@@ -61,13 +65,14 @@ html{
 .contenedor-header header ul{
     display: flex;
     list-style: none;
+
 }
 
 /* Estilo del texto de la listas de despliegue */
  .contenedor-header header nav ul li a{
     text-align: none;
     color: #fff;
-    margin: 0 15px;  
+    margin: 0 10px;  
     padding: 3px ; 
     transition: .5s;
     text-decoration: none;
@@ -76,7 +81,7 @@ html{
 /* Estilo para el texto de la listas de despliegue al pasar el mouse por encima */
 .contenedor-header header nav ul li a:hover{
     color: #49b8a0;
-    border-bottom:  #49b8a0;
+    border-bottom: 2px solid #49b8a0; /* Agrega una línea debajo del texto al pasar el mouse */
 }
 
 .nav-responsive{
@@ -87,6 +92,61 @@ html{
     cursor: pointer;
     display: none;
 }
+
+/* ===== MEDIA QUERIES ===== */
+
+/* Hamburguesa oculta por defecto */
+.nav-responsive {
+  display: none;
+  background: #49b8a0;
+  color: #fff;
+  padding: 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* En pantallas pequeñas */
+@media (max-width: 768px) {
+  .contenedor-header header ul {
+    display: none; /* se oculta el menú */
+    flex-direction: column;
+    background: #1e2326;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 220px;
+    padding: 20px;
+  }
+
+  .contenedor-header header ul.active {
+    display: flex; /* se muestra solo cuando se activa */
+  }
+
+  .nav-responsive {
+    display: block; /* aquí sí aparece la hamburguesa */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -623,16 +683,22 @@ html{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 250px;
-    grid-gap: 20px;
+    grid-gap: 40px 20px;
+    
 
 }
 
-/* Estilo del titulo "Postafolio" */
+/* Estilo del titulo "Portafolio" */
 .portafolio h2{
     text-align: center;
     font-size: 30px;
     margin-bottom: 20px;
-    color: #49b8a0;
+    color: #f3f5f4;
+}
+/* Estilo del subtitulo de cada proyecto del portafolio */
+.box {
+  text-align: center;
+  width: 100%; /* ajusta según tu diseño */
 }
 
 /* Estilo de las cajas donde van las imagenes del portafolio */
@@ -656,7 +722,14 @@ html{
     transition: .5s;
 }
 
-/*Para que las imganes se acoplen a la pagina y se pongan ennvertical con el mismo tamaño */
+.overlay {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Para que las imganes se acoplen a la pagina cuando se achica y se pongan en vertical con el mismo tamaño */
 @media (max-width: 768px){
     .portafolio{
         padding: 30px;
@@ -675,6 +748,8 @@ html{
     transition: .5s;
     }
 }
+
+
 
 /*********** para el POPUP: ventan pequeña de cada proyecto*/
 
@@ -881,11 +956,21 @@ html{
     transform: scale(1.05);      /* efecto ligero de agrandamiento */
 }
 
+/*** ESTILO DEL VIDEO EN EL MODAL */
 
+.video-modal {
+  display: flex;
+  max-width: 100%;
+  justify-content: center;   /* Centra horizontalmente */
+  margin: 40px 0;
+}
 
-
-
-
+.video-content {
+  width: 90%;   /* Ajusta el ancho total  */  
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  object-fit: cover;   /* Ajusta el video sin deformarlo */
+}
 
 
 

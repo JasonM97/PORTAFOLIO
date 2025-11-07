@@ -1,74 +1,106 @@
 
-// Calse del modelo del carrusel
-class ModalCarousel {
-  constructor(container, interval = 2000) {
-    this.container = container;
-    this.images = this.container.querySelectorAll('.carousel-image');
-    this.index = 0;
-    this.timer = null;
-    this.interval = interval;
-    this.showImage(this.index);
-  }
- // Muestra la imagen en el índice dado
-  showImage(i) {
-    this.images.forEach(img => img.style.display = 'none');
-    this.images[i].style.display = 'block';
-  }
-// Muestra la siguiente imagen
-  next() {
-    this.index = (this.index + 1) % this.images.length;
-    this.showImage(this.index);
-  }
-// Muestra la imagen anterior
-  prev() {
-    this.index = (this.index - 1 + this.images.length) % this.images.length;
-    this.showImage(this.index);
-  }
-// Inicia el autoplay
-  start() {
-    this.stop(); // evitar duplicados
-    this.timer = setInterval(() => this.next(), this.interval);
-  }
-// Detiene el autoplay
-  stop() {
-    if (this.timer) clearInterval(this.timer);
-  }
-}
-
-// Inicializar carruseles y modales
-const modals = document.querySelectorAll('.modal');
-const modalCarousels = {};
-
-// Configurar cada modal con su carrusel
-modals.forEach(modal => {
-  const carouselContainer = modal.querySelector('.carousel-modal');
-  if (!carouselContainer) return;
-
-  const carousel = new ModalCarousel(carouselContainer);
-  modalCarousels[modal.id] = carousel;
-
-  // Botones prev/next
-  modal.querySelector('.prev').addEventListener('click', () => carousel.prev());
-  modal.querySelector('.next').addEventListener('click', () => carousel.next());
-
-  // Cerrar con la X
-  modal.querySelector('.close').addEventListener('click', () => {
-    modal.style.display = 'none';
-    carousel.stop();
-  });
-
-  // Cerrar clic fuera
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.style.display = 'none';
-      carousel.stop();
+document.addEventListener("DOMContentLoaded", () => {
+  class ModalCarousel {
+    constructor(container, interval = 2000) {
+      this.container = container;
+      this.images = container.querySelectorAll('.carousel-image');
+      this.index = 0;
+      this.timer = null;
+      this.interval = interval;
+      this.showImage(this.index);
     }
-  });
-});
 
-// Abrir modal
-function abrirModal(id) {
-  const modal = document.getElementById(id);
-  modal.style.display = 'flex';
-  modalCarousels[id].start(); // iniciar autoplay solo cuando está abierto
-}
+    showImage(i) {
+      this.images.forEach(img => img.style.display = 'none');
+      this.images[i].style.display = 'block';
+    }
+
+    next() {
+      this.index = (this.index + 1) % this.images.length;
+      this.showImage(this.index);
+    }
+
+    prev() {
+      this.index = (this.index - 1 + this.images.length) % this.images.length;
+      this.showImage(this.index);
+    }
+
+    start() {
+      this.stop();
+      this.timer = setInterval(() => this.next(), this.interval);
+    }
+
+    stop() {
+      if (this.timer) clearInterval(this.timer);
+      this.timer = null;
+    }
+  }
+
+  // ===============================
+  //   Inicialización de modales
+  // ===============================
+  const modals = document.querySelectorAll('.modal');
+  const modalCarousels = {};
+
+modals.forEach(modal => {
+    const carouselContainer = modal.querySelector(".carousel-modal");
+    let carousel = null;
+
+    // Crear carrusel si existe contenedor
+    if (carouselContainer) {
+      carousel = new ModalCarousel(carouselContainer);
+      modalCarousels[modal.id] = carousel;
+
+      const prevBtn = carouselContainer.querySelector(".prev");
+      const nextBtn = carouselContainer.querySelector(".next");
+      if (prevBtn) prevBtn.addEventListener("click", () => carousel.prev());
+      if (nextBtn) nextBtn.addEventListener("click", () => carousel.next());
+    }
+
+    // Botón cerrar (X)
+    const closeBtn = modal.querySelector(".close");
+    if (closeBtn) {
+      closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+        if (carousel) carousel.stop();
+        const video = modal.querySelector("video");
+        if (video) {
+          video.pause();
+          video.currentTime = 0;
+        }
+      });
+    }
+
+    // Cerrar al hacer clic fuera del contenido
+    modal.addEventListener("click", e => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+        if (carousel) carousel.stop();
+        const video = modal.querySelector("video");
+        if (video) {
+          video.pause();
+          video.currentTime = 0;
+        }
+      }
+    });
+  });
+
+  // ===============================
+  //   Funciones globales
+  // ===============================
+
+  // Abrir modal
+  window.abrirModal = function(id) {
+    const modal = document.getElementById(id);
+    modal.style.display = 'flex';
+    // Si el modal no tiene carrusel, no intentes hacer start()
+    if (modalCarousels[id]) modalCarousels[id].start();
+  };
+
+  // Cerrar modal
+  window.cerrarModal = function(id) {
+    const modal = document.getElementById(id);
+    modal.style.display = 'none';
+    modalCarousels[id].stop();
+  };
+});

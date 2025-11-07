@@ -10,9 +10,12 @@
         <title>Portafolio Jason</title>
         <link rel="stylesheet" href="estilo.css">
         <link rel="stylesheet" href="carrucel.css">
+        <!-- JS : Para los cuadros popup-->
         <script src="popup.js" defer></script>
         <script src="popup_carrucel.js" defer></script>
-
+        <script src="menu.js" defer></script>
+        <!-- JS : Para el carrusel de certificados-->
+       <script src="carrucel.js" defer></script>
         <link rel="icon" href="img/avatar.png" type="image/png">
 
 
@@ -38,12 +41,7 @@
                     <ul>
                         <li><a href="#inicio">Inicio</a></li>
                         <li><a href="#sobremi">Sobre mi</a></li>
-                        <li>
-                         <a href="#skills" onclick="window.location.href = '#skills'; location.reload(); return false;">
-                                    Skills
-                            </a>
-                        </li>
-
+                        <li><a href="#skills">Skills</a></li>
                         <li><a href="#cv">Curriculum</a></li>
                         <li><a href="#portafolio">Portafolio</a></li>
                         <li><a href="#contactos">Contacto</a></li>
@@ -60,6 +58,7 @@
             </header>
 
         </div>
+
 
        <!-- SECCION DE INICIO-->
         <section id="inicio" class="inicio">
@@ -159,6 +158,7 @@
 
         </section>
         <br\>
+
 
         <!-- SECCION SKILSS-->
         <section id="skills" class="skills">
@@ -301,6 +301,7 @@
 
             </div>
         </section>
+
 
         <!-- SECCION CURRICULUM-->
         <section id="cv" class="cv"> 
@@ -467,6 +468,16 @@
                                         </div>                                         
                                     </div>
 
+                                    <!--imagen 6-->
+                                    <div class="carousel-item">
+                                        <img src="img/c_flutter.jpg">
+                                        <div class="carousel-caption">   
+                                            <h2>2025</h2>
+                                        </div>                                         
+                                    </div>
+
+
+
                                 </div>
 
                                 <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
@@ -477,126 +488,237 @@
             </div>
         </section>
 
+
         <!-- SECCION PORTAFOLIO-->
+            <section id="portafolio" class="portafolio">
+                <h2>MIS PROYECTOS :  WEB , MÓVIL , DASHBOARD Y SISTEMA</h2>
 
-        <section id="portafolio"class="portafolio">
-            <!-- PROYECTO CALACULADORA-->
-             
-            <div class="box">
-                <img src="app/calculadora1.png" alt="" onclick="abrirModal('modal1')">
-            </div>
-
-            <!-- PROYECTO SISTEMAS DE VENTA-->
-            <div class="box">
-                <img src="app/calculadora1.png" alt="" onclick="abrirModal('modal2')">
-            </div>
-
-            <!-- PROYECTO APP MOVIL: TRANSPORTE-->
-            <div class="box">
-                <img src="app/calculadora1.png" alt="">
-            </div>
-
-
-            <!-- PROYECTO PAGINA WEB: JARDIN BOTANICO-->
-            <div class="box">
-                <img src="app/calculadora1.png" alt="">
-            </div>
-
-            <!-- DASHBOAR POWER BI: PARA AUTOS -->
-            <div class="box">
-                <img src="app/calculadora1.png" alt="">
-            </div>
-
-        </section>
-
-            <!-- Modal Proyecto 1 : CALCULADORA -->
-            <div id="modal1" class="modal">
-
-                <div class="modal-content">
-                   <span class="close" onclick="cerrarModal('modal1')">&times;</span>
-                    <h2>Proyecto Calculadora</h2>
-                    <p>Calculadora para realizar operaciones basicas matemáticas</p>
-
-                    <!-- Carrusel de imágenes -->
-                    <div class="carousel-modal">
-                        <img class="carousel-image" src="app/calculadora1.png" alt="Imagen 1">
-                        <img class="carousel-image" src="img/c_power.png" alt="Imagen 2">
-                        <img class="carousel-image" src="img/c_datascience.png" alt="Imagen 3">
-
-                        <button class="prev" onclick="modalCarousel.prev()">&#10094;</button>
-                        <button class="next" onclick="modalCarousel.next()">&#10095;</button>
+                    <!-- PROYECTO 1:  APP MOVIL TRANSPORTE -->
+                    <div class="box">
+                        <!-- usuario: jason97gts@gmail.com / pass: admin123-->
+                        <img src="app/transporte/transporte.jpg" alt="Aplicación móvil de transporte" onclick="abrirModal('modal1')">
+                        <div class="overlay">
+                        <span>Aplicación Móvil Transporte</span>
+                        </div>
                     </div>
 
-                    <h3>Tecnologías</h3>
-                    <div class="skills-icons">
-                            <img src="iconos/html.png" alt="Java" title="Java">
-                            <img src="iconos/html.png" alt="NetBeans" title="NetBeans">
-                            <img src="iconos/html.png" alt="GitHub" title="GitHub">
+                    <!-- PROYECTO 2: PAGINA WEB JARDIN BOTANICO -->
+                    <div class="box">
+                        
+                        <img src="app/jardin/jardin_web.jpg" alt="Sistema de ventas" onclick="abrirModal('modal2')">
+                        <div class="overlay">
+                        <span>Pagina Web </span>
+                        </div>
                     </div>
 
-                    <h3>Mi función</h3>
-                    <div class="skills-icons">
-                                <ul>
-                                    <li>Desarrollé la interfaz de usuario</li>
-                                    <li>Diseñé la experiencia visual de la aplicación</li>
-                                    <li>Implementé funcionalidades clave</li>
-                                </ul>
+                    <!-- PROYECTO 3: SIMULACION DE CAJERO DE BANCO BASICO -->
+                    <div class="box">
+                        <!-- usuario: jason97gts@gmail.com / pass: fluter123-->
+                        <img src="app/cajero/cajero_movil.jpg" alt="Aplicación móvil de cajero" onclick="abrirModal('modal3')">
+                        <div class="overlay">
+                        <span>Aplicación Móvil Cajero Básico</span>
+                        </div>
                     </div>
-                    <!-- Boton ver proyecto -->
-                    <div class="ver-proyectos">
-                        <a href="https://github.com/JasonM97/PORTAFOLIO" target="_blank">
-                            <button class="btn-codigo">Ver Código</button>
-                        </a>
+
+                    <!-- PROYECTO 4: DASHBOARD -->
+                    <div class="box">
+                        <!-- usuario: jason97gts@gmail.com / pass: fluter123-->
+                        <img src="app/dashboard/dash_portada.jpeg" alt="Dashboard" onclick="abrirModal('modal4')">
+                        <div class="overlay">
+                        <span>Dashboard Looker & Power Bi</span>
+                        </div>
                     </div>
+
+
+            </section>
+            
+            <!-- Modal Proyecto 1 : APP MOVIL -->
+                <div id="modal1" class="modal">
+
+                    <div class="modal-content">
+                    <span class="close" >&times;</span>
+                        <h2>APLICACIÓN MOVIL TRANSPORTE</h2>
+                        <p>Proyecto desarrollado como parte del programa de vinculación con la sociedad, cuyo objetivo es identificar y dar a conocer las rutas del transporte público en una de las parroquias de la ciudad de Quito.</p>
+
+                        <!-- Carrusel de imágenes -->
+                        <div class="video-modal">
+                            <video class="video-content" controls>
+                                <source src="app/transporte/transporte.mp4" type="video/mp4"></video>
+                                
+                        </div>
+
+                        <h3>Tecnologías</h3>
+                        <div class="skills-icons">
+                                <img src="iconos/java.png" alt="Java" title="Java">
+                                <img src="iconos/android.png" alt="Android" title="Android">
+                                <img src="iconos/firebase.png" alt="Firebase" title="Firebase">
+
+                        </div>
+
+                        <h3>Mi función</h3>
+                        <div class="skills-icons">
+                                    <ul>
+                                        <li>Desarrollé la interfaz de la aplicación</li>
+                                        <li>Diseñé la experiencia visual de la aplicación</li>
+                                        <li>Implementé la autenticacion con Firebase</li>
+                                    </ul>
+                        </div>
+                        <!-- Boton ver proyecto -->
+                        <div class="ver-proyectos">
+                            <a href="https://github.com/JasonM97/VINCULACION_TRANSPORTE.git" target="_blank">
+                                <button class="btn-codigo">Ver Código</button>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                
+            <!-- Modal Proyecto 2: PAGINA WEB JARDIN BOTANICO -->
+                <div id="modal2" class="modal">
+
+                    <div class="modal-content">
+                    <span class="close">&times;</span>
+                        <h2>PAGINA WEB JARDÍN BOTÁNICO</h2>
+                        <p>Como parte de proyectos integrador que se realiza a final de semestre, desarrolle en equipo una página web para el Jardín Botánico que permite trazar rutas personalizadas para conocer las plantas de mayor interés. Además, busca fomentar el uso de la tecnología en el entorno educativo.</p>
+
+                        <!-- Carrusel de imágenes -->
+                        <div class="carousel-modal">
+                            <img class="carousel-image" src="app/jardin/img1.jpg" alt="Imagen 1">
+                            <img class="carousel-image" src="app/jardin/img2.jpg" alt="Imagen 2">
+                            <img class="carousel-image" src="app/jardin/img3.jpg" alt="Imagen 3">
+
+                            <button class="prev">&#10094;</button>
+                            <button class="next">&#10095;</button>
+                        </div>
+
+                        <h3>Tecnologías</h3>
+                        <div class="skills-icons">
+                                <img src="iconos/html.png" alt="html" title="html">
+                                <img src="iconos/css.png" alt="CSS" title="css">
+                                <img src="iconos/js.png" alt="Java Script" title="Java">
+                        </div>
+
+                        <h3>Mi función</h3>
+                        <div class="skills-icons">
+                                    <ul>
+                                        <li>Diseñé la experiencia visual de la pagina web</li>
+                                        <li>Desarrollé la navegacion entre secciones </li>
+                                        <li>Agregué secciones educativas sobre biodiversidad.</li>
+                                    </ul>
+                        </div>
+                        <!-- Boton ver proyecto -->
+                        <div class="ver-proyectos">
+                            <a href="https://github.com/JasonM97/PAGINA_WEB_Jardin_Botanico.git" target="_blank">
+                                <button class="btn-codigo">Ver Código</button>
+                            </a>
+                        </div>
+                    </div>
+
+                </div> 
+
+            <!-- Modal Proyecto 3: PAGINA WEB JARDIN BOTANICO -->
+                <div id="modal3" class="modal">
+
+                    <div class="modal-content">
+                    <span class="close" >&times;</span>
+                        <h2>APLICACIÓN MOVIL CAJERO BÁSICO</h2>
+                        <p>Proyecto desarrollado como parte del proceso de aprendizaje, enfocado en simular el funcionamiento de un cajero automático básico. Permite realizar operaciones como transferir, retirar y depositar dinero.</p>
+
+                        <!-- VIDEO DEL APLICACION MOVIL -->
+                        <div class="video-modal">
+                            <video class="video-content" controls>
+                                <source src="app/cajero/BANK.mp4" type="video/mp4"></video>
+                                
+                        </div>
+
+                        <h3>Tecnologías</h3>
+                        <div class="skills-icons">
+                                <img src="iconos/dart.png" alt="Dart" title="Dart">
+                                <img src="iconos/flutter.png" alt="Flutter" title="Flutter">
+                                <img src="iconos/firebase.png" alt="Firebase" title="Firebase">
+
+                        </div>
+
+                        <h3>Mi función</h3>
+                        <div class="skills-icons">
+                                    <ul>
+                                        <li>Diseñé la interfaz del cajero para facilitar su uso.</li>
+                                        <li>Simulé las funciones de transferencia, retiro y depósito.</li>
+                                        <li>Comprobé el correcto funcionamiento de las operaciones.</li>
+                                    </ul>
+                        </div>
+                        <!-- Boton ver proyecto -->
+                        <div class="ver-proyectos">
+                            <a href="" target="_blank">
+                                <button class="btn-codigo">Ver Código</button>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
 
-            </div> 
+            <!-- Modal Proyecto 4: DASHBOAR EN POWER BI Y LOOKER STUDIO -->
+                <div id="modal4" class="modal">
 
-            <!-- Modal Proyecto 2 -->
-            <div id="modal2" class="modal">
+                    <div class="modal-content">
+                    <span class="close">&times;</span>
+                        <h2>DASHBOAR ENFOCADO A PUBLICIDAD Y MARKETING</h2>
+                        <p>Creo dashboard enfocado en publicidad  para observar y analizar métricas importantes. Este proyecto muestra mi gusto por entender los resultados de las campañas y mejorar las estrategias a través de los datos</p>
 
-                <div class="modal-content">
-                   <span class="close" onclick="cerrarModal('modal2')">&times;</span>
-                    <h2>Proyecto Calculadora</h2>
-                    <p>Calculadora para realizar operaciones basicas matemáticas</p>
+                        <!-- Carrusel de imágenes -->
+                        <div class="carousel-modal">
+                            <img class="carousel-image" src="app/dashboard/dash1.jpg" alt="Imagen 1">
+                            <img class="carousel-image" src="app/dashboard/dash2.jpg" alt="Imagen 2">
+                            <img class="carousel-image" src="app/dashboard/dash3.jpg" alt="Imagen 3">
+                            <img class="carousel-image" src="app/dashboard/dash4.jpg" alt="Imagen 4">
+                            <img class="carousel-image" src="app/dashboard/dash5.jpg" alt="Imagen 5">
 
-                    <!-- Carrusel de imágenes -->
-                    <div class="carousel-modal">
-                        <img class="carousel-image" src="app/calculadora1.png" alt="Imagen 1">
-                        <img class="carousel-image" src="img/c_power.png" alt="Imagen 2">
-                        <img class="carousel-image" src="img/c_datascience.png" alt="Imagen 3">
+                            <button class="prev">&#10094;</button>
+                            <button class="next">&#10095;</button>
+                        </div>
 
-                        <button class="prev" onclick="modalCarousel.prev()">&#10094;</button>
-                        <button class="next" onclick="modalCarousel.next()">&#10095;</button>
+                        <h3>Tecnologías</h3>
+                        <div class="skills-icons">
+                                <img src="iconos/excel.png" alt="Excel" title="excel">
+                                <img src="iconos/power.png" alt="Power" title="power">
+                                <img src="iconos/looker.png" alt="Looker" title="looker">
+                        </div>
+
+                        <h3>Mi función</h3>
+                        <div class="skills-icons">
+                                    <ul>
+                                        <li>Dashboar 1: Analisis Televisión 
+                                            <a href="https://lookerstudio.google.com/reporting/2ccace67-5c65-45b6-81eb-0b7ade3007b2/page/puoNF"> (ver)</a>
+                                        </li>
+
+                                         <li>Dashboar 2: Analisis Mercado Publicitario Para Autos 
+                                            <a href="https://lookerstudio.google.com/reporting/eaf33eba-410f-42bc-9282-8c4c0c22e8d2/page/eq1VF"> (ver)</a>
+                                        </li> 
+                                     
+                                         <li>Dashboar 3: Analisis Mercado Publicitario Para Telefonia  
+                                            <a href="https://lookerstudio.google.com/reporting/5c5f25db-9673-4c72-9c60-5600c2a4c77d"> (ver)</a>
+                                        </li>
+                                        
+                                         <li>Dashboar 4: Analisis Mercado Publicitario Para Casas de Apuestas 
+                                            <a href="https://app.powerbi.com/view?r=eyJrIjoiYWZmODgyZWQtOTc2My00ZTdjLWJlNGYtNjc4MzI5NzUxMTFiIiwidCI6IjJiZTkzN2IzLTQ4Y2MtNDVmOC05NzUzLTE2MDBlZWRhMzkyOSJ9"> (ver)</a>
+                                        </li>                                       
+
+                                         <li>Dashboar 5: Analisis Mercado Publicitario Para Farmacias
+                                            <a href="https://app.powerbi.com/view?r=eyJrIjoiZTk5OTgwZjktNTc0Ny00Yzc2LWI0NTYtM2ZkODMzYjQ4MjkwIiwidCI6IjJiZTkzN2IzLTQ4Y2MtNDVmOC05NzUzLTE2MDBlZWRhMzkyOSJ9"> (ver)</a>
+                                        </li>   
+
+
+                                    </ul>
+                        </div>
+                        
                     </div>
 
-                    <h3>Tecnologías</h3>
-                    <div class="skills-icons">
-                            <img src="iconos/html.png" alt="Java" title="Java">
-                            <img src="iconos/html.png" alt="NetBeans" title="NetBeans">
-                            <img src="iconos/html.png" alt="GitHub" title="GitHub">
-                    </div>
+                </div> 
+        <!-- FIN SECCION PORTAFOLIO-->
 
-                    <h3>Mi función</h3>
-                    <div class="skills-icons">
-                                <ul>
-                                    <li>Desarrollé la interfaz de usuario</li>
-                                    <li>Diseñé la experiencia visual de la aplicación</li>
-                                    <li>Implementé funcionalidades clave</li>
-                                </ul>
-                    </div>
-                    <!-- Boton ver proyecto -->
-                    <div class="ver-proyectos">
-                        <a href="https://github.com/JasonM97/PORTAFOLIO" target="_blank">
-                            <button class="btn-codigo">Ver Código</button>
-                        </a>
-                    </div>
-                </div>
 
-            </div> 
 
-        <!-- JS : Para el carrusel de certificados-->
-       <script src="carrucel.js"></script>
+
 
        
 
