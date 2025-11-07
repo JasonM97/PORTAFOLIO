@@ -348,7 +348,7 @@ section {
 
 /* Estilo para el BOTON de descagar CV y color al pasar curso (hover) */
 /* Fomato del boton color , bordes y alineacion*/
-.sobremi button{
+.sobremi .btn-cv {
     cursor: pointer;
     background-color: transparent;
     border: 2px solid #e6e9e8;
@@ -358,12 +358,13 @@ section {
     padding: 10px 22px;
     font-size: 16px;
     position: relative;
+    text-decoration: none; 
     z-index: 10;
-    color: #fff;
+    color: #ffffff;
 }
 
 /* Estilo de barra de carga del boton descarga CV */
-.sobremi button .overlay{
+.sobremi .btn-cv  .overlay{
     position: absolute;
     top: 0;
     left: 0;
@@ -374,7 +375,7 @@ section {
     transition: 1s;
 }
 /* Al pasar el cursor se pinta el boton */
-.sobremi button:hover .overlay{
+.sobremi .btn-cv:hover .overlay{
     width: 100%;
 }
 
@@ -972,9 +973,62 @@ section {
   object-fit: cover;   /* Ajusta el video sin deformarlo */
 }
 
+/* ---------------------------------- */
+/* ESTILO PARA LA SECCION: CONTACTAME */
+/* ---------------------------------- */
 
+/* Separa el fondo de la seccion sobre mi de manera opaca , ademas letras blancas */
+.contacto{
+    background: #1e2326;
+    padding: 50px 20px;
+    color: #fff;
+    padding-top: 20px;
+}
 
+/* Estilo del contenido Quien soy*/
+.contacto .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
 
+/* Estilo del titulo "Sobre Mi" */
+.contacto h2{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #49b8a0;
+}
+
+/*Estilo del texto de la descripcion de quien soy */
+.contact-buttons {
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  gap: 20px;               /* espacio entre botones */
+  flex-wrap: wrap;         /* permite que bajen si no caben */
+  margin-top: 15px;
+}
+
+.btn-contacto {
+  display: flex;
+  align-items: center;     /* ícono y texto alineados */
+  gap: 8px;                /* espacio entre ícono y texto */
+  background-color: #49b8a0;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-contacto:hover {
+  background-color: #3da188;
+  transform: scale(1.05);
+}
+
+.btn-contacto i {
+  font-size: 16px;
+}
 
 
 

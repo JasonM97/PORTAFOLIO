@@ -1,3 +1,5 @@
+//JS PARA EL MENU RESPONSIVE CUANDO SE VE EN MOVIL O TABLET
+
 const navResponsive = document.querySelector('.nav-responsive');
 const navMenu = document.querySelector('.contenedor-header header ul');
 const navLinks = document.querySelectorAll('.contenedor-header header ul li a');
